@@ -1,4 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&family=Shrikhand&display=swap");
+body {
+  font-weight: 100;
+  font-family: "Roboto";
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -22,16 +27,29 @@
 .location_restaurants__text {
   margin: 0;
   padding: 20px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .company_description {
   text-align: center;
-  padding: 0 60px;
+  padding: 10px 60px;
+  background: #F6F6F6;
 }
 .company_description__title {
   font-size: 1.5rem;
+  font-weight: 900;
+}
+.company_description__text {
+  margin: 10px 0px;
+}
+
+.btn {
+  border-radius: 30px;
+  padding: 15px;
+  color: #ffff;
+  background: linear-gradient(170deg, #ff79da 0%, #9356dc 100%);
+  border: none;
+  margin: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
