@@ -75,7 +75,7 @@ body {
 }
 
 .how_it_works {
-    padding: 15px;
+    padding: 20px;
 
     &--title {
         @include home-title;
@@ -106,6 +106,7 @@ body {
             left: -13px;
             border-radius: 15px;
             z-index: -1;
+            box-shadow: $header-box_shadow;
 
             &_icone {
                 color: #7e7e7e;
@@ -120,5 +121,63 @@ body {
             }
         }
         
+    }
+}
+
+.restaurants {
+    background: $company-description-bkg-cl;
+    padding: 20px;
+
+    &--title {
+        @include home-title;
+    }
+
+    &--cards {
+        border-radius: 15px;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        background: #ffff;
+
+        &--img {
+            object-fit: cover;
+            object-position: bottom;
+            height: 45vw;
+            border-radius: 15px 15px 0 0;
+        }
+
+        &--new_label {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: $cl-tertiary;
+            color: adjust-color($color: $cl-tertiary, $red: -153, $green: -91, $blue: -106);
+            border-radius: 2px;
+            padding: 5px 10px;
+            font-weight: 400;
+            font-size: 0.75rem;
+        }
+
+        &--infos {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px;
+            font-size: 0.8rem;
+
+            & > * {
+                margin: 0;
+            }
+
+            &--name {
+                font-weight: 500;
+            }
+
+            &--heart_icon {
+                font-size: 1rem;
+            }
+        }
+
     }
 }

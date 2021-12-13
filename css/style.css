@@ -59,7 +59,7 @@ body {
 }
 
 .how_it_works {
-  padding: 15px;
+  padding: 20px;
 }
 .how_it_works--title {
   font-size: 1.5rem;
@@ -90,6 +90,7 @@ body {
   left: -13px;
   border-radius: 15px;
   z-index: -1;
+  box-shadow: 0px 1px 12px 1px rgba(68, 68, 68, 0.43);
 }
 .how_it_works--step_block_icone {
   color: #7e7e7e;
@@ -100,6 +101,56 @@ body {
 }
 .how_it_works--step_block--colored_icone {
   color: #9356dc;
+}
+
+.restaurants {
+  background: #F6F6F6;
+  padding: 20px;
+}
+.restaurants--title {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.restaurants--cards {
+  border-radius: 15px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: #ffff;
+}
+.restaurants--cards--img {
+  object-fit: cover;
+  object-position: bottom;
+  height: 45vw;
+  border-radius: 15px 15px 0 0;
+}
+.restaurants--cards--new_label {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #99e2d0;
+  color: #008766;
+  border-radius: 2px;
+  padding: 5px 10px;
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+.restaurants--cards--infos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  font-size: 0.8rem;
+}
+.restaurants--cards--infos * {
+  margin: 5px 0;
+}
+.restaurants--cards--infos--name {
+  font-weight: 500;
+}
+.restaurants--cards--infos--heart_icon {
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
