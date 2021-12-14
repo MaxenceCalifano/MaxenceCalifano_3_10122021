@@ -1,29 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&family=Shrikhand&display=swap");
 @import "./utils/variables";
+@import "./utils/animations";
 
+@import "./base/base.scss";
+
+@import "./layouts/header";
 
 @mixin home-title {
     font-size: 1.5rem;
     font-weight: 900;
-}
-
-body {
-    font-weight: 100;
-    font-family: $text-font;
-}
-.header {
-  display: flex;
-  justify-content: center;
-  -webkit-box-shadow: $header-box_shadow;
-  box-shadow: $header-box_shadow;
-  position: relative;
-  z-index: 1;
-
-  &--logo {
-    font-family: $logo-and-title;
-    font-size: 2rem;
-    margin: 20px auto;
-  }
 }
 
 .location_restaurants {
@@ -132,12 +116,17 @@ body {
         flex-direction: column;
         position: relative;
         background: #ffff;
+        margin: 15px 0;                     /*PENSEZ 0 RAJOUTER UN BOX-SHADOW*/
 
         &--img {
             object-fit: cover;
             object-position: bottom;
             height: 45vw;
             border-radius: 15px 15px 0 0;
+
+            &.align-to-center {  
+                object-position: 50% 61%;
+            }
         }
 
         &--new_label {
@@ -168,28 +157,30 @@ body {
             }
 
             &--heart_icon {
-                font-size: 1rem;
+                font-size: 15px;
                 z-index: 1;
                 color: rgb(90, 84, 84);
 
                 &:hover{
-                    opacity: 0;
-                    
+                    animation: heart-icon-opacity $heart-anim-duration 120ms cubic-bezier(.42,.3,.15,.97) forwards;
                 }
 
                 &:hover + &-full {
                     opacity: 1;
+                    animation: fill-heart-button $heart-anim-duration cubic-bezier(.06,.21,.15,.97);
                 }
 
                  &-full {
                         position: absolute;
                         right: 15px;
-                        bottom: 41px;
+                        bottom: 40px;
                         color: transparent;
-                        background: linear-gradient(45deg, $cl-secondary 0%, $cl-primary 100%);;
+                        background: linear-gradient(45deg, $cl-secondary 0%, $cl-primary 100%);
+                        -webkit-background-clip: text;
                         background-clip: text;
                         opacity: 0;
-                        font-size: 1rem;
+                        font-size: 15px;
+                        transform-origin: 50% 100%;
                 }
             }
         }

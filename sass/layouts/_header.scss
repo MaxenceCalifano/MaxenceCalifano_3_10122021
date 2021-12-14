@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    justify-content: center;
+    -webkit-box-shadow: $header-box_shadow;
+    box-shadow: $header-box_shadow;
+    position: relative;
+    z-index: 1;
+  
+    &--logo {
+      font-family: $logo-and-title;
+      font-size: 2rem;
+      margin: 20px auto;
+    }
+  }

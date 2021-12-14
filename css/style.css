@@ -1,4 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&family=Shrikhand&display=swap");
+@keyframes fill-heart-button {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes heart-icon-opacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 body {
   font-weight: 100;
   font-family: "Roboto";
@@ -118,12 +137,17 @@ body {
   flex-direction: column;
   position: relative;
   background: #ffff;
+  margin: 15px 0;
+  /*PENSEZ 0 RAJOUTER UN BOX-SHADOW*/
 }
 .restaurants--cards--img {
   object-fit: cover;
   object-position: bottom;
   height: 45vw;
   border-radius: 15px 15px 0 0;
+}
+.restaurants--cards--img.align-to-center {
+  object-position: 50% 61%;
 }
 .restaurants--cards--new_label {
   position: absolute;
@@ -143,32 +167,35 @@ body {
   padding: 0 15px;
   font-size: 0.8rem;
 }
-.restaurants--cards--infos > * {
-  margin: 0;
+.restaurants--cards--infos * {
+  margin: 5px 0px;
 }
 .restaurants--cards--infos--name {
   font-weight: 500;
 }
 .restaurants--cards--infos--heart_icon {
-  font-size: 1rem;
+  font-size: 15px;
   z-index: 1;
   color: #5a5454;
 }
 .restaurants--cards--infos--heart_icon:hover {
-  opacity: 0;
+  animation: heart-icon-opacity 200ms 120ms cubic-bezier(0.42, 0.3, 0.15, 0.97) forwards;
 }
 .restaurants--cards--infos--heart_icon:hover + .restaurants--cards--infos--heart_icon-full {
   opacity: 1;
+  animation: fill-heart-button 200ms cubic-bezier(0.06, 0.21, 0.15, 0.97);
 }
 .restaurants--cards--infos--heart_icon-full {
   position: absolute;
   right: 15px;
-  bottom: 41px;
+  bottom: 40px;
   color: transparent;
   background: linear-gradient(45deg, #ff79da 0%, #9356dc 100%);
+  -webkit-background-clip: text;
   background-clip: text;
   opacity: 0;
-  font-size: 1rem;
+  font-size: 15px;
+  transform-origin: 50% 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
