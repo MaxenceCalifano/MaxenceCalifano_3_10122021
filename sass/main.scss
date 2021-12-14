@@ -1,13 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&family=Shrikhand&display=swap");
+@import "./utils/variables";
 
-$logo-and-title: "Shrikhand", cursive;
-$text-font: "Roboto";
-$cl-primary: #9356dc;
-$cl-secondary: #ff79da;
-$cl-tertiary: #99e2d0;
-$location-cl: #eaeaea;
-$company-description-bkg-cl: #F6F6F6;
-$header-box_shadow: 0px 1px 12px 1px rgba(68, 68, 68, 0.43);
 
 @mixin home-title {
     font-size: 1.5rem;
@@ -161,7 +154,7 @@ body {
 
         &--infos {
             display: flex;
-            align-items: center;
+            align-items: baseline;
             justify-content: space-between;
             padding: 0 15px;
             font-size: 0.8rem;
@@ -176,6 +169,28 @@ body {
 
             &--heart_icon {
                 font-size: 1rem;
+                z-index: 1;
+                color: rgb(90, 84, 84);
+
+                &:hover{
+                    opacity: 0;
+                    
+                }
+
+                &:hover + &-full {
+                    opacity: 1;
+                }
+
+                 &-full {
+                        position: absolute;
+                        right: 15px;
+                        bottom: 41px;
+                        color: transparent;
+                        background: linear-gradient(45deg, $cl-secondary 0%, $cl-primary 100%);;
+                        background-clip: text;
+                        opacity: 0;
+                        font-size: 1rem;
+                }
             }
         }
 
