@@ -21,6 +21,7 @@
 body {
   font-weight: 100;
   font-family: "Roboto";
+  box-sizing: border-box;
 }
 
 a {
@@ -56,6 +57,12 @@ a {
 .footer--links li {
   margin: 5px 0px;
 }
+.footer--links li a {
+  font-weight: 300;
+}
+.footer--links li a:hover {
+  font-weight: bold;
+}
 .footer--links li i {
   margin-right: 5px;
   width: 20px;
@@ -63,6 +70,7 @@ a {
 .footer--links li:first-child {
   font-family: "Shrikhand", cursive;
   margin: 8px 0px;
+  font-size: 1.2rem;
 }
 
 .location_restaurants {
@@ -187,9 +195,9 @@ a {
   background: #99e2d0;
   color: #008766;
   border-radius: 2px;
-  padding: 5px 10px;
+  padding: 7px 12px;
   font-weight: 400;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
 }
 .restaurants--cards--infos {
   display: flex;

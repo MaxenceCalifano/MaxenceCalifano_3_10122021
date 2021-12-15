@@ -12,6 +12,13 @@
         
         li {
             margin: 5px 0px;
+            
+            a {
+                font-weight: 300;
+                &:hover {
+                    font-weight: bold;
+                }
+            }
 
             i {
                 margin-right: 5px;
@@ -21,6 +28,7 @@
             &:first-child {
                 font-family: $logo-and-title;
                 margin: 8px 0px;
+                font-size: $font-size-base*1.2;
             }
            
         }

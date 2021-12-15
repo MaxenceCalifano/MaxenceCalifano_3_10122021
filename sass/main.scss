@@ -143,9 +143,9 @@
             background: $cl-tertiary;
             color: adjust-color($color: $cl-tertiary, $red: -153, $green: -91, $blue: -106);
             border-radius: 2px;
-            padding: 5px 10px;
+            padding: 7px 12px;
             font-weight: 400;
-            font-size: $font-size-base*0.75;
+            font-size: $font-size-base*0.9;
         }
 
         &--infos {
