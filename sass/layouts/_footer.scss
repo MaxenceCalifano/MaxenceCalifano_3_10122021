@@ -1,0 +1,29 @@
+.footer {
+    color:#ffff;
+    background: $footer-cl;
+    padding: 6px 0px;
+
+    &--links {
+        list-style-type: none;
+
+        .partner-icon {
+            transform: rotate(-35deg);
+        }
+        
+        li {
+            margin: 5px 0px;
+
+            i {
+                margin-right: 5px;
+                width:20px;
+            }
+
+            &:first-child {
+                font-family: $logo-and-title;
+                margin: 8px 0px;
+            }
+           
+        }
+        
+    }
+}
