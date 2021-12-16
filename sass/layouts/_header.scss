@@ -11,4 +11,11 @@
       font-size: $font-size-base*2;
       margin: 10px auto;
     }
+
+    .header--return {
+        position: relative;
+        top: 20px;
+        left: 20px;
+        font-size: $font-size-base*1.25;
+    }
   }
