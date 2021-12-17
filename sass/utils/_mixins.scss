@@ -2,3 +2,9 @@
     font-size: $font-size-base*1.5;
     font-weight: 900;
 }
+
+@mixin ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+        white-space: nowrap;
+}
