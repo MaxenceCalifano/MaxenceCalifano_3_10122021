@@ -26,6 +26,16 @@
     transform: rotate(1turn);
   }
 }
+@keyframes food-loader {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 body {
   font-weight: 100;
   font-family: "Roboto";
@@ -456,17 +466,29 @@ template {
 .footer--links {
   list-style-type: none;
 }
+@media screen and (min-width: 900px) {
+  .footer--links {
+    display: flex;
+  }
+}
 .footer--links .partner-icon {
   transform: rotate(-35deg);
 }
 .footer--links li {
   margin: 5px 0px;
 }
+@media screen and (min-width: 900px) {
+  .footer--links li {
+    display: inline;
+    margin: 8px 20px;
+    padding: 5px;
+  }
+  .footer--links li:hover {
+    color: #ff79da;
+  }
+}
 .footer--links li a {
   font-weight: 300;
-}
-.footer--links li a:hover {
-  font-weight: bold;
 }
 .footer--links li i {
   margin-right: 5px;
@@ -605,7 +627,7 @@ template {
 
 .head-image {
   object-fit: cover;
-  max-width: 100%;
+  width: 100%;
   height: 48vh;
   margin-bottom: -60px;
 }
@@ -617,6 +639,7 @@ template {
   position: relative;
   display: flex;
   flex-direction: column;
+  max-width: 1440px;
 }
 .menu-header {
   display: flex;
@@ -627,6 +650,18 @@ template {
 .menu-header--title {
   font-family: "Shrikhand", cursive;
   font-size: 1.5rem;
+}
+@media screen and (min-width: 900px) {
+  .menu--meals {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 900px) {
+  .menu--meals > section {
+    width: 32%;
+    margin: 0 10px;
+  }
 }
 .menu-parts-title {
   position: relative;
@@ -649,10 +684,20 @@ template {
   overflow: hidden;
   white-space: nowrap;
   margin: 10px 0;
+  animation: food-loader 600ms ease-out backwards;
+}
+.food-cards.load-time--1 {
+  animation-delay: 380ms;
+}
+.food-cards.load-time--2 {
+  animation-delay: 460ms;
+}
+.food-cards.load-time--3 {
+  animation-delay: 540ms;
 }
 .food-cards:hover .food-cards--block-icon {
   /* animation: food-cards--icon 1000ms ease-in-out;
-  animation-fill-mode: both; */
+      animation-fill-mode: both; */
   width: 100px;
 }
 .food-cards:hover .food-cards--block-icon--icon {

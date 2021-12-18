@@ -1,98 +1,120 @@
 .head-image {
-	object-fit: cover;
-	max-width: 100%;
-	height: 48vh;
-    margin-bottom: -60px;
+  object-fit: cover;
+  width: 100%;
+  height: 48vh;
+  margin-bottom: -60px;
 }
 
 .menu {
-    background: $company-description-bkg-cl;
-    border-radius: 40px 40px 0 0;
-    padding: 15px;
-    position: relative;
+  background: $company-description-bkg-cl;
+  border-radius: 40px 40px 0 0;
+  padding: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+
+  &-header {
     display: flex;
-    flex-direction: column;
-
-    &-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        &--title {
-            font-family: $logo-and-title;
-            font-size: $font-size-base*1.5;
-        }
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    &--title {
+      font-family: $logo-and-title;
+      font-size: $font-size-base * 1.5;
     }
+  }
 
-    &-parts-title {
-        position: relative;
-    
-        &::before {
-            content: "";
-            position: absolute;
-            top: 20px;
-            width: 2.5rem;
-            height: 5px;
-            border-bottom: 3px solid $cl-tertiary;
-        }
+  &--meals {
+    @include desktop {
+      display: flex;
+      justify-content: center;
     }
+  }
+
+  &--meals > section {
+    @include desktop {
+      width: 32%;
+      margin: 0 10px;
+    }
+  }
+
+  &-parts-title {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      width: 2.5rem;
+      height: 5px;
+      border-bottom: 3px solid $cl-tertiary;
+    }
+  }
 }
 
 .food-cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffff;
+  border-radius: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 10px 0;
+  animation: food-loader 600ms ease-out backwards;
+
+  @for $i from 1 through $food-loader-step {
+    &.load-time--#{$i} {
+      animation-delay: $food-loader-delay + 80 * $i;
+    }
+  }
+
+  &:hover &--block-icon {
+    /* animation: food-cards--icon 1000ms ease-in-out;
+        animation-fill-mode: both; */
+    width: 100px;
+  }
+
+  &:hover &--block-icon--icon {
+    //animation: food-cards--icon 1000ms ease-in-out;
+    transform: rotate(1turn);
+  }
+  &--infos {
+    width: 75%;
+    margin: 0 10px;
+    overflow: hidden;
+
+    &--name {
+      font-weight: 500;
+      @include ellipsis;
+    }
+
+    &--description {
+      @include ellipsis;
+    }
+  }
+
+  &--price {
+    text-align: end;
+    margin-right: 10px;
+    align-self: end;
+    font-weight: 500;
+  }
+  &--block-icon {
+    align-self: stretch;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background: #ffff;
-    border-radius: 15px;
-    overflow: hidden;
-    white-space: nowrap;
-    margin: 10px 0;
+    background: $cl-tertiary;
+    border-radius: 0 15px 15px 0;
+    width: 0%;
+    justify-content: center;
+    transition: width 700ms ease-in-out;
 
-    &:hover &--block-icon {
-        /* animation: food-cards--icon 1000ms ease-in-out;
-        animation-fill-mode: both; */
-        width: 100px;
+    &--icon {
+      color: #ffff;
+      font-size: $font-size-base * 1.5;
+      transition: transform 700ms ease-in-out;
     }
-
-    &:hover &--block-icon--icon {
-        //animation: food-cards--icon 1000ms ease-in-out;
-        transform: rotate(1turn);
-    }
-    &--infos {
-        width: 75%;
-        margin: 0 10px;
-        overflow: hidden;
-
-        &--name{
-            font-weight: 500;
-            @include ellipsis;
-        }
-
-        &--description {
-        @include ellipsis;
-        }
-    }
-
-    &--price {
-        text-align: end;
-        margin-right: 10px;
-        align-self: end;
-        font-weight: 500;
-    }
-    &--block-icon {
-        align-self: stretch;
-        display: flex;
-        align-items: center;
-        background: $cl-tertiary;
-        border-radius: 0 15px 15px 0;
-        width: 0%;
-        justify-content: center;
-        transition: width 700ms ease-in-out;
-
-        &--icon {
-            color: #ffff;
-            font-size: $font-size-base*1.5;
-            transition: transform 700ms ease-in-out;
-        }
-    }
+  }
 }

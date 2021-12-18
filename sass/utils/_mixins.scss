@@ -8,3 +8,9 @@
     text-overflow: ellipsis;
         white-space: nowrap;
 }
+
+@mixin desktop {
+    @media screen and (min-width:$desktop) {
+        @content;
+    }
+}
