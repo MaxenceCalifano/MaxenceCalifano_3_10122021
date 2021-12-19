@@ -533,11 +533,21 @@ template {
   font-size: 1.5rem;
   font-weight: 900;
 }
+@media screen and (min-width: 900px) {
+  .how_it_works--steps {
+    display: flex;
+  }
+}
 .how_it_works--step {
   display: flex;
   align-items: center;
   border-radius: 15px;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 900px) {
+  .how_it_works--step {
+    width: 30%;
+  }
 }
 .how_it_works--step_number {
   border-radius: 50%;
@@ -581,26 +591,38 @@ template {
   font-size: 1.5rem;
   font-weight: 900;
 }
-.restaurants--cards {
+@media screen and (min-width: 900px) {
+  .restaurants--cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+.restaurants--card {
   border-radius: 15px;
-  max-width: 400px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
   background: #ffff;
-  margin: 15px 0;
+  margin: 15px auto;
   box-shadow: 0px 3px 23px -10px rgba(68, 68, 68, 0.43);
 }
-.restaurants--cards--img {
+@media screen and (min-width: 900px) {
+  .restaurants--card {
+    width: 23%;
+  }
+}
+.restaurants--card--img {
   object-fit: cover;
   object-position: bottom;
-  height: 45vw;
+  height: 10.5rem;
   border-radius: 15px 15px 0 0;
 }
-.restaurants--cards--img.align-to-center {
+.restaurants--card--img.align-to-center {
   object-position: 50% 61%;
 }
-.restaurants--cards--new_label {
+.restaurants--card--new_label {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -611,24 +633,24 @@ template {
   font-weight: 400;
   font-size: 0.9rem;
 }
-.restaurants--cards--infos {
+.restaurants--card--infos {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 15px;
   font-size: 1rem;
 }
-.restaurants--cards--infos * {
+.restaurants--card--infos * {
   margin: 8px 0;
 }
-.restaurants--cards--infos--name {
+.restaurants--card--infos--name {
   font-weight: 500;
 }
 
 .head-image {
   object-fit: cover;
   width: 100%;
-  height: 48vh;
+  height: 24vh;
   margin-bottom: -60px;
 }
 
@@ -640,6 +662,7 @@ template {
   display: flex;
   flex-direction: column;
   max-width: 1440px;
+  margin: auto;
 }
 .menu-header {
   display: flex;
@@ -659,7 +682,7 @@ template {
 }
 @media screen and (min-width: 900px) {
   .menu--meals > section {
-    width: 32%;
+    width: 30%;
     margin: 0 10px;
   }
 }
