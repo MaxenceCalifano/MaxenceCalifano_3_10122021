@@ -469,6 +469,8 @@ template {
 @media screen and (min-width: 900px) {
   .footer--links {
     display: flex;
+    max-width: 1440px;
+    margin: auto;
   }
 }
 .footer--links .partner-icon {
@@ -528,6 +530,17 @@ template {
 
 .how_it_works {
   padding: 20px;
+  overflow: hidden;
+}
+@media screen and (min-width: 900px) {
+  .how_it_works--max-width-desktop {
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 55px;
+  }
 }
 .how_it_works--title {
   font-size: 1.5rem;
@@ -586,6 +599,10 @@ template {
 .restaurants {
   background: #F6F6F6;
   padding: 20px;
+}
+.restaurants--max-width-desktop {
+  max-width: 1440px;
+  margin: auto;
 }
 .restaurants--title {
   font-size: 1.5rem;

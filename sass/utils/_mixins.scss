@@ -1,16 +1,21 @@
 @mixin home-title {
-    font-size: $font-size-base*1.5;
-    font-weight: 900;
+  font-size: $font-size-base * 1.5;
+  font-weight: 900;
 }
 
 @mixin ellipsis {
-    overflow: hidden;
-    text-overflow: ellipsis;
-        white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 @mixin desktop {
-    @media screen and (min-width:$desktop) {
-        @content;
-    }
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin dont-go-above-1440px {
+  max-width: 1440px;
+  margin: auto;
 }

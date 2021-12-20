@@ -27,7 +27,16 @@
 
 .how_it_works {
   padding: 20px;
-
+  overflow: hidden;
+  &--max-width-desktop {
+    @include desktop {
+      @include dont-go-above-1440px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      left: 55px;
+    }
+  }
   &--title {
     @include home-title;
   }
@@ -88,6 +97,9 @@
 .restaurants {
   background: $company-description-bkg-cl;
   padding: 20px;
+  &--max-width-desktop {
+    @include dont-go-above-1440px;
+  }
 
   &--title {
     @include home-title;
