@@ -466,7 +466,7 @@ template {
 .footer--links {
   list-style-type: none;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 992px) {
   .footer--links {
     display: flex;
     max-width: 1440px;
@@ -479,7 +479,7 @@ template {
 .footer--links li {
   margin: 5px 0px;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 992px) {
   .footer--links li {
     display: inline;
     margin: 8px 20px;
@@ -517,7 +517,7 @@ template {
 .company_description {
   text-align: center;
   padding: 30px 50px;
-  background: #F6F6F6;
+  background: #f6f6f6;
 }
 .company_description--title {
   font-size: 1.5rem;
@@ -532,7 +532,7 @@ template {
   padding: 20px;
   overflow: hidden;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 992px) {
   .how_it_works--max-width-desktop {
     max-width: 1440px;
     margin: auto;
@@ -546,7 +546,7 @@ template {
   font-size: 1.5rem;
   font-weight: 900;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 992px) {
   .how_it_works--steps {
     display: flex;
   }
@@ -557,7 +557,7 @@ template {
   border-radius: 15px;
   margin-bottom: 20px;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 992px) {
   .how_it_works--step {
     width: 30%;
   }
@@ -597,7 +597,7 @@ template {
 }
 
 .restaurants {
-  background: #F6F6F6;
+  background: #f6f6f6;
   padding: 20px;
 }
 .restaurants--max-width-desktop {
@@ -608,11 +608,14 @@ template {
   font-size: 1.5rem;
   font-weight: 900;
 }
-@media screen and (min-width: 900px) {
+.restaurants--cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+@media screen and (max-width: 576px) {
   .restaurants--cards {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    display: block;
   }
 }
 .restaurants--card {
@@ -625,9 +628,14 @@ template {
   margin: 15px auto;
   box-shadow: 0px 3px 23px -10px rgba(68, 68, 68, 0.43);
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 992px) {
   .restaurants--card {
-    width: 23%;
+    width: 24%;
+  }
+}
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  .restaurants--card {
+    width: 45%;
   }
 }
 .restaurants--card--img {
@@ -672,7 +680,7 @@ template {
 }
 
 .menu {
-  background: #F6F6F6;
+  background: #f6f6f6;
   border-radius: 40px 40px 0 0;
   padding: 15px;
   position: relative;
@@ -691,13 +699,13 @@ template {
   font-family: "Shrikhand", cursive;
   font-size: 1.5rem;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 992px) {
   .menu--meals {
     display: flex;
     justify-content: center;
   }
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 992px) {
   .menu--meals > section {
     width: 30%;
     margin: 0 10px;

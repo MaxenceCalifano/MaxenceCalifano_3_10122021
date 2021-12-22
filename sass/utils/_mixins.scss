@@ -15,6 +15,18 @@
   }
 }
 
+@mixin tablet {
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}
+
 @mixin dont-go-above-1440px {
   max-width: 1440px;
   margin: auto;

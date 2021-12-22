@@ -106,10 +106,12 @@
   }
 
   &--cards {
-    @include desktop {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    @include mobile {
+      display: block;
     }
   }
   &--card {
@@ -123,7 +125,10 @@
     box-shadow: $cards-shadow;
 
     @include desktop {
-      width: 23%;
+      width: 24%;
+    }
+    @include tablet {
+      width: 45%;
     }
 
     &--img {
