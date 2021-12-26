@@ -1,0 +1,29 @@
+.loader {
+  position: absolute;
+  margin: 50vh auto;
+  font-size: $font-size-base * 3;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  gap: 10px;
+  width: 184px;
+
+  &--icons {
+    &--1 {
+      animation: loader_1 8s ease-in-out infinite backwards;
+    }
+    &--2 {
+      animation: loader_2 8s ease-in-out infinite backwards;
+    }
+    &--3 {
+      animation: loader_3 8s ease-in-out infinite backwards;
+    }
+    &--4 {
+      animation: loader_4 8s ease-in-out infinite backwards;
+    }
+    &--5 {
+      animation: loader_5 8s ease-in-out infinite backwards;
+    }
+  }
+}
