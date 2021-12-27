@@ -1,5 +1,5 @@
 .container {
-  animation: page-loader 3s ease-in-out forwards;
+  animation: page-loader 3s $loader-timing forwards;
 }
 
 .location_restaurants {

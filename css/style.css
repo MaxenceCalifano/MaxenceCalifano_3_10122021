@@ -567,18 +567,26 @@ template {
 
 .loader {
   position: absolute;
-  margin: 50vh auto;
+  margin: 175px auto;
   font-size: 3rem;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   left: 0;
   right: 0;
-  gap: 6px;
-  animation: food-loader 5s ease-in-out forwards;
+  animation: food-loader 3100ms cubic-bezier(0.82, 0.06, 0.94, 0.74) forwards;
   z-index: 10;
 }
+.loader--title {
+  padding: 5px;
+  font-family: "Shrikhand", cursive;
+  background: linear-gradient(170deg, #ff8de0 0%, #9e67e0 100%);
+  background-clip: text;
+  color: transparent;
+}
 .loader--icons {
-  margin: 0 5px;
+  display: flex;
+  gap: 6px;
 }
 .loader--icons--1 {
   animation: loader_1 6s ease-in-out infinite;
@@ -666,7 +674,7 @@ template {
 }
 
 .container {
-  animation: page-loader 3s ease-in-out forwards;
+  animation: page-loader 3s cubic-bezier(0.82, 0.06, 0.94, 0.74) forwards;
 }
 
 .location_restaurants {

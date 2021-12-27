@@ -1,17 +1,28 @@
 .loader {
   position: absolute;
-  margin: 50vh auto;
+  margin: 175px auto;
   font-size: $font-size-base * 3;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   left: 0;
   right: 0;
-  gap: 6px;
-  animation: food-loader 5s ease-in-out forwards;
+  animation: food-loader 3100ms $loader-timing forwards;
   z-index: 10;
-
+  &--title {
+    padding: 5px;
+    font-family: $logo-and-title;
+    background: linear-gradient(
+      170deg,
+      lighten($cl-secondary, 4%) 0%,
+      lighten($cl-primary, 4%) 100%
+    );
+    background-clip: text;
+    color: transparent;
+  }
   &--icons {
-    margin: 0 5px;
+    display: flex;
+    gap: 6px;
     &--1 {
       animation: loader_1 6s ease-in-out infinite;
       color: $cl-primary;
