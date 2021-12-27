@@ -6,24 +6,31 @@
   justify-content: center;
   left: 0;
   right: 0;
-  gap: 10px;
-  width: 184px;
+  gap: 6px;
+  animation: food-loader 5s ease-in-out forwards;
+  z-index: 10;
 
   &--icons {
+    margin: 0 5px;
     &--1 {
-      animation: loader_1 8s ease-in-out infinite backwards;
+      animation: loader_1 6s ease-in-out infinite;
+      color: $cl-primary;
     }
     &--2 {
-      animation: loader_2 8s ease-in-out infinite backwards;
+      animation: loader_2 6s ease-in-out infinite;
+      color: $cl-secondary;
     }
     &--3 {
-      animation: loader_3 8s ease-in-out infinite backwards;
+      animation: loader_3 6s ease-in-out infinite;
+      color: $cl-tertiary;
     }
     &--4 {
-      animation: loader_4 8s ease-in-out infinite backwards;
+      animation: loader_4 6s ease-in-out infinite;
+      color: $cl-secondary;
     }
     &--5 {
-      animation: loader_5 8s ease-in-out infinite backwards;
+      animation: loader_5 6s ease-in-out infinite;
+      color: $cl-tertiary;
     }
   }
 }

@@ -1,3 +1,7 @@
+.container {
+  animation: page-loader 3s ease-in-out forwards;
+}
+
 .location_restaurants {
   background-color: $location-cl;
   display: flex;
