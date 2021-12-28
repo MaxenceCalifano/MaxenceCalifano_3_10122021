@@ -1,5 +1,5 @@
 .container {
-  animation: page-loader 3s $loader-timing forwards;
+  animation: page-loader $loader-duration $loader-timing forwards;
 }
 
 .location_restaurants {
@@ -80,6 +80,10 @@
       border-radius: 15px;
       box-shadow: $cards-shadow;
       padding: 10px 0;
+
+      &:hover {
+        background: #f5edff;
+      }
 
       &:hover > * {
         color: $cl-primary;
@@ -167,7 +171,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 15px;
+      padding: 5px 15px;
       font-size: $font-size-base;
 
       &--text * {

@@ -26,6 +26,16 @@
     transform: rotate(1turn);
   }
 }
+@keyframes menu-loader {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 @keyframes food-loader {
   0% {
     opacity: 1;
@@ -362,9 +372,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 
@@ -372,9 +382,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -383,9 +393,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -435,8 +445,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type=checkbox],
-[type=radio] {
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -446,8 +456,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -455,7 +465,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type=search] {
+[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -465,7 +475,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type=search]::-webkit-search-decoration {
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -541,7 +551,8 @@ template {
   margin-right: 15px;
 }
 .heart_icon:hover {
-  animation: heart-icon-opacity 200ms 120ms cubic-bezier(0.42, 0.3, 0.15, 0.97) forwards;
+  animation: heart-icon-opacity 200ms 120ms cubic-bezier(0.42, 0.3, 0.15, 0.97)
+    forwards;
 }
 .heart_icon:hover + .heart_icon-full {
   opacity: 1;
@@ -550,7 +561,7 @@ template {
 .heart_icon-full {
   position: absolute;
   right: 15px;
-  top: 18px;
+  top: 22px;
   color: transparent;
   background: linear-gradient(45deg, #ff79da 0%, #9356dc 100%);
   -webkit-background-clip: text;
@@ -560,7 +571,7 @@ template {
   transform-origin: 50% 100%;
 }
 .heart_icon-full.home_position {
-  bottom: 18px;
+  bottom: 23px;
   right: 30px;
   top: unset;
 }
@@ -574,7 +585,7 @@ template {
   flex-direction: column;
   left: 0;
   right: 0;
-  animation: food-loader 3100ms cubic-bezier(0.82, 0.06, 0.94, 0.74) forwards;
+  animation: food-loader 5s cubic-bezier(0.82, 0.06, 0.94, 0.74) forwards;
   z-index: 10;
 }
 .loader--title {
@@ -674,7 +685,7 @@ template {
 }
 
 .container {
-  animation: page-loader 3s cubic-bezier(0.82, 0.06, 0.94, 0.74) forwards;
+  animation: page-loader 5s cubic-bezier(0.82, 0.06, 0.94, 0.74) forwards;
 }
 
 .location_restaurants {
@@ -759,6 +770,9 @@ template {
   box-shadow: 0px 3px 23px -10px rgba(68, 68, 68, 0.43);
   padding: 10px 0;
 }
+.how_it_works--step_block:hover {
+  background: #f5edff;
+}
 .how_it_works--step_block:hover > * {
   color: #9356dc;
 }
@@ -837,7 +851,7 @@ template {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 15px;
+  padding: 5px 15px;
   font-size: 1rem;
 }
 .restaurants--card--infos--text * {
@@ -850,7 +864,7 @@ template {
 .head-image {
   object-fit: cover;
   width: 100%;
-  height: 24vh;
+  height: 275px;
   margin-bottom: -60px;
 }
 
@@ -872,7 +886,8 @@ template {
 }
 .menu-header--title {
   font-family: "Shrikhand", cursive;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
+  margin-left: 10px;
 }
 @media screen and (min-width: 992px) {
   .menu--meals {
@@ -888,13 +903,16 @@ template {
 }
 .menu-parts-title {
   position: relative;
+  margin-left: 10px;
+  font-size: 1rem;
+  font-weight: 100;
 }
 .menu-parts-title::before {
   content: "";
   position: absolute;
   top: 20px;
   width: 2.5rem;
-  height: 5px;
+  height: 3px;
   border-bottom: 3px solid #99e2d0;
 }
 
@@ -907,7 +925,8 @@ template {
   overflow: hidden;
   white-space: nowrap;
   margin: 10px 0;
-  animation: food-loader 600ms ease-out backwards;
+  animation: menu-loader 600ms ease-out backwards;
+  box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.75);
 }
 .food-cards.load-time--1 {
   animation-delay: 380ms;
@@ -919,9 +938,7 @@ template {
   animation-delay: 540ms;
 }
 .food-cards:hover .food-cards--block-icon {
-  /* animation: food-cards--icon 1000ms ease-in-out;
-      animation-fill-mode: both; */
-  width: 100px;
+  width: 70px;
 }
 .food-cards:hover .food-cards--block-icon--icon {
   transform: rotate(1turn);
@@ -933,6 +950,8 @@ template {
 }
 .food-cards--infos--name {
   font-weight: 500;
+  margin-top: 12px;
+  margin-bottom: 5px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -941,12 +960,16 @@ template {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  margin-top: 5px;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
 }
 .food-cards--price {
   text-align: end;
-  margin-right: 10px;
   align-self: end;
   font-weight: 500;
+  flex-grow: 1;
+  margin-right: 4px;
 }
 .food-cards--block-icon {
   align-self: stretch;
@@ -957,11 +980,10 @@ template {
   width: 0%;
   justify-content: center;
   transition: width 700ms ease-in-out;
+  margin-left: 10px;
 }
 .food-cards--block-icon--icon {
   color: #ffff;
   font-size: 1.5rem;
   transition: transform 700ms ease-in-out;
 }
-
-/*# sourceMappingURL=style.css.map */

@@ -7,7 +7,7 @@
   flex-direction: column;
   left: 0;
   right: 0;
-  animation: food-loader 3100ms $loader-timing forwards;
+  animation: food-loader $loader-duration $loader-timing forwards;
   z-index: 10;
   &--title {
     padding: 5px;

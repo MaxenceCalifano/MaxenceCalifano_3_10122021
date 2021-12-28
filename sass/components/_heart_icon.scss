@@ -19,7 +19,7 @@
   &-full {
     position: absolute;
     right: 15px;
-    top: 18px;
+    top: 22px;
     color: transparent;
     background: linear-gradient(45deg, $cl-secondary 0%, $cl-primary 100%);
     -webkit-background-clip: text;
@@ -29,7 +29,7 @@
     transform-origin: 50% 100%;
 
     &.home_position {
-      bottom: 18px;
+      bottom: 23px;
       right: 30px;
       top: unset;
     }
