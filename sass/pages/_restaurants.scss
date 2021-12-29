@@ -3,6 +3,31 @@
   width: 100%;
   height: 275px;
   margin-bottom: -60px;
+  @include desktop {
+    height: 320px;
+  }
+
+  &.head-image--delice_des_sens {
+    @media screen and (min-width: $tablet) {
+      object-position: 50% 65%;
+    }
+  }
+  &.head-image--a_la_francaise {
+    @media screen and (min-width: $desktop) {
+      object-position: 50% 70%;
+    }
+  }
+  &.head-image--palette_du_gout,
+  &.head-image--note_enchantee {
+    @media screen and (min-width: $desktop) {
+      object-position: 50% 60%;
+    }
+  }
+  /* &.head-image--note_enchantee {
+    @media screen and (min-width: $desktop) {
+      object-position: 50% 60%;
+    }
+  } */
 }
 
 .menu {
