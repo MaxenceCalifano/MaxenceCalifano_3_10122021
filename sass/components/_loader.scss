@@ -12,13 +12,7 @@
   &--title {
     padding: 5px;
     font-family: $logo-and-title;
-    background: linear-gradient(
-      170deg,
-      lighten($cl-secondary, 4%) 0%,
-      lighten($cl-primary, 4%) 100%
-    );
-    background-clip: text;
-    color: transparent;
+    color: $cl-primary;
   }
   &--icons {
     display: flex;

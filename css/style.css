@@ -590,9 +590,7 @@ template {
 .loader--title {
   padding: 5px;
   font-family: "Shrikhand", cursive;
-  background: linear-gradient(170deg, #ff8de0 0%, #9e67e0 100%);
-  background-clip: text;
-  color: transparent;
+  color: #9356dc;
 }
 .loader--icons {
   display: flex;
@@ -865,11 +863,6 @@ template {
   width: 100%;
   height: 275px;
   margin-bottom: -60px;
-  /* &.head-image--note_enchantee {
-    @media screen and (min-width: $desktop) {
-      object-position: 50% 60%;
-    }
-  } */
 }
 @media screen and (min-width: 992px) {
   .head-image {
@@ -960,6 +953,9 @@ template {
 }
 .food-cards.load-time--3 {
   animation-delay: 540ms;
+}
+.food-cards.load-time--4 {
+  animation-delay: 620ms;
 }
 .food-cards:hover .food-cards--block-icon {
   width: 70px;
