@@ -543,7 +543,12 @@ template {
   box-shadow: 0px 1px 12px 1px rgba(68, 68, 68, 0.9);
 }
 
+.heart-box {
+  position: relative;
+}
+
 .heart_icon {
+  position: relative;
   font-size: 1.5rem;
   cursor: pointer;
   z-index: 1;
@@ -560,7 +565,6 @@ template {
 .heart_icon-full {
   position: absolute;
   right: 15px;
-  top: 22px;
   color: transparent;
   background: linear-gradient(45deg, #ff79da 0%, #9356dc 100%);
   -webkit-background-clip: text;
@@ -568,11 +572,6 @@ template {
   opacity: 0;
   font-size: 1.5rem;
   transform-origin: 50% 100%;
-}
-.heart_icon-full.home_position {
-  bottom: 23px;
-  right: 30px;
-  top: unset;
 }
 
 .loader {

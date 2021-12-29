@@ -10,7 +10,7 @@
 
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-    <link rel="stylesheet" type="text/css" href="../css/prefixed/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
     <script src="https://kit.fontawesome.com/3d6985fcc4.js" crossorigin="anonymous"></script>
 
 </head>
@@ -18,7 +18,7 @@
 <body>
     <header class="header">
         <a href="../index.html" class="fas fa-arrow-left header--return"></a>
-        <p class="header--logo">ohmyfood</p>
+        <a href="../index.html" class="header--logo">ohmyfood</a>
     </header>
     <img class="head-image head-image--a_la_francaise" src="../images/restaurants/a_la_francaise.jpg"
         alt="restaurant À la française">
@@ -26,8 +26,10 @@
     <main class="menu">
         <div class="menu-header">
             <h1 class="menu-header--title">À la française</h1>
-            <i class="far fa-heart heart_icon"></i>
-            <i class="fas fa-heart heart_icon-full"></i>
+            <div class="heart-box">
+                <i class="far fa-heart heart_icon"></i>
+                <i class="fas fa-heart heart_icon-full home_position"></i>
+            </div>
         </div>
 
         <div class="menu--meals">
