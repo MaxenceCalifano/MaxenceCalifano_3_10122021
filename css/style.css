@@ -585,7 +585,7 @@ template {
   left: 0;
   right: 0;
   animation: food-loader 3s cubic-bezier(0.82, 0.06, 0.94, 0.74) forwards;
-  z-index: 10;
+  z-index: -1;
 }
 .loader--title {
   padding: 5px;
@@ -770,7 +770,7 @@ template {
 .how_it_works--step_block:hover {
   background: #f5edff;
 }
-.how_it_works--step_block:hover > * {
+.how_it_works--step_block:hover > i {
   color: #9356dc;
 }
 .how_it_works--step_block_icone {
