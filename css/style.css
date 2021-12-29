@@ -584,7 +584,7 @@ template {
   flex-direction: column;
   left: 0;
   right: 0;
-  animation: food-loader 5s cubic-bezier(0.82, 0.06, 0.94, 0.74) forwards;
+  animation: food-loader 3s cubic-bezier(0.82, 0.06, 0.94, 0.74) forwards;
   z-index: 10;
 }
 .loader--title {
@@ -682,7 +682,7 @@ template {
 }
 
 .container {
-  animation: page-loader 5s cubic-bezier(0.82, 0.06, 0.94, 0.74) forwards;
+  animation: page-loader 3s cubic-bezier(0.82, 0.06, 0.94, 0.74) forwards;
 }
 
 .location_restaurants {
@@ -921,15 +921,15 @@ template {
 .menu-parts-title {
   position: relative;
   margin-left: 10px;
+  margin-bottom: 15px;
   font-size: 1rem;
   font-weight: 100;
 }
 .menu-parts-title::before {
   content: "";
   position: absolute;
-  top: 20px;
   width: 2.5rem;
-  height: 3px;
+  height: 20px;
   border-bottom: 3px solid #99e2d0;
 }
 
