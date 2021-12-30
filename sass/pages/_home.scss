@@ -1,5 +1,8 @@
 .container {
   animation: page-loader $loader-duration $loader-timing forwards;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .location_restaurants {

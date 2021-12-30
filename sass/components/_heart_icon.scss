@@ -1,7 +1,7 @@
 .heart-box {
   position: relative;
 }
-.heart_icon {
+.heart-icon {
   position: relative;
   font-size: $font-size-base * 1.5;
   cursor: pointer;
@@ -14,13 +14,13 @@
       cubic-bezier(0.42, 0.3, 0.15, 0.97) forwards;
   }
 
-  &:hover + &-full {
+  &:hover + &--full {
     opacity: 1;
     animation: fill-heart-button $heart-anim-duration
       cubic-bezier(0.06, 0.21, 0.15, 0.97);
   }
 
-  &-full {
+  &--full {
     position: absolute;
     right: 15px;
     color: transparent;
