@@ -31,3 +31,9 @@
   max-width: 1440px;
   margin: auto;
 }
+
+@mixin stick-footer-to-the-ground {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
