@@ -34,7 +34,10 @@
   flex-direction: column;
   flex-grow: 2;
 
-  @include dont-go-above-1440px;
+  @media screen and (min-width: 1440px) {
+    width: 1440px;
+    margin: auto;
+  }
 
   &-header {
     display: flex;
