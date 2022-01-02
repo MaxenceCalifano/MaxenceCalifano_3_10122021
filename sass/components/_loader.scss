@@ -18,24 +18,19 @@
     display: flex;
     gap: 6px;
     &--1 {
-      animation: loader_1 6s ease-in-out infinite;
-      color: $cl-primary;
+      @include home-loader-animation(loader_1, $cl-primary);
     }
     &--2 {
-      animation: loader_2 6s ease-in-out infinite;
-      color: $cl-secondary;
+      @include home-loader-animation(loader_2, $cl-secondary);
     }
     &--3 {
-      animation: loader_3 6s ease-in-out infinite;
-      color: $cl-tertiary;
+      @include home-loader-animation(loader_3, $cl-tertiary);
     }
     &--4 {
-      animation: loader_4 6s ease-in-out infinite;
-      color: $cl-secondary;
+      @include home-loader-animation(loader_4, $cl-secondary);
     }
     &--5 {
-      animation: loader_5 6s ease-in-out infinite;
-      color: $cl-tertiary;
+      @include home-loader-animation(loader_5, $cl-tertiary);
     }
   }
 }

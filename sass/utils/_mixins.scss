@@ -37,3 +37,8 @@
   flex-direction: column;
   min-height: 100vh;
 }
+
+@mixin home-loader-animation($anim-name, $colour: rgb(0, 0, 0)) {
+  animation: $anim-name 6s ease-in-out infinite;
+  color: $colour;
+}
